@@ -1,6 +1,5 @@
 let silderContainer=document.querySelector(".slider-container");
 let sliderItem=document.querySelectorAll(".slider-item");
-let indicatorItem=document.querySelectorAll(".indicator-item");
 let currentSlide=0;
 
 function showSlide(n){
@@ -18,13 +17,6 @@ function showSlide(n){
             slide.classList.add("active");
         }
     })
-
-    indicatorItem.forEach((indicator,n)=>{
-        indicator.classList.remove("active-2");
-        if(n===currentSlide){
-            indicator.classList.add("active-2");
-        }
-    })
 }
 
 function changeSlide(n){
@@ -33,5 +25,5 @@ function changeSlide(n){
 }
 setInterval(() => {
     changeSlide(1)
-}, 5000);
+}, 3000);
   
