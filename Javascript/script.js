@@ -7,27 +7,20 @@ function showSlide(n){
     if(n>=sliderItem.length){
         currentSlide=0;
     }
-    else if(n<0){
+    if(n<0){
         currentSlide=sliderItem.length-1;
     }
 
-    sliderItem.forEach((slide,n)=>{
+    sliderItem.forEach((slide)=>{
         slide.classList.remove("active");
-        
-        if(n===currentSlide){
-            slide.classList.add("active");
-        }
     })
+    sliderItem[currentSlide].classList.add("active");
 }
 
 function changeSlide(n){
-    showSlide(currentSlide+=n);
-
+    currentSlide += n
+    showSlide(currentSlide);
 }
-// setInterval(() => {
-//     changeSlide(1)
-//     changeQuotes(currentindex++)
-// }, 1000);
 
 //---------------Quotes-------------//
 
@@ -67,13 +60,11 @@ const startTimer = ()=>{
             changeSlide(1)
 
             if(currentindex<quotes.length){
-
                 currentindex+=1;
             }
             else{
                 currentindex = 0
             }
-
             changeQuotes(currentindex)
         time=resetTime;
         document.getElementById('time').innerText=time
