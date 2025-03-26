@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color:coral;
+    background-color:tan;
 }
 /*-------------Slider-------------*/
 
@@ -35,15 +35,6 @@ body{
 
 .active{
     display: block;
-}
-
-.slider-indicator button{
-    width: 10px;
-    height: 10px;
-}
-
-.active-2{
-    background-color: black;
 }
 
 /* ------------Timer-css-------------- */
